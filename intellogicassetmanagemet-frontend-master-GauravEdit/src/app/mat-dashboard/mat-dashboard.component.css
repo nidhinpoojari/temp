@@ -1,0 +1,24 @@
+.grid-container {
+  margin: 20px;
+  display: flexbox;
+
+
+}
+
+.dashboard-card {
+  height: 70px;
+  width: 200px;
+
+  margin: 10px;
+  background-color: lightblue;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}

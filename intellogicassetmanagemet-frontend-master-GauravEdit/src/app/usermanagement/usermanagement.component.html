@@ -1,0 +1,157 @@
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened class="example-container">
+      <img src="assets/images/logo-light.png" class="logo" /><br>
+      <div class="text-center">
+        <img src="assets/images/users/user-6.jpg" class="rounded-circle img-tumbnail avatar-lg" />
+        <p class="user">Rinu Madathil</p>
+        <p class="text-muted">Admin Head</p>
+      </div>
+      <div>
+        <button mat-button style="float: left;" class="bt">
+          <mat-icon>dashboard</mat-icon>Dashnoard
+        </button>
+        <button mat-button class="bt" [matMenuTriggerFor]="drop">
+          <mat-icon>flip_to_front</mat-icon>Asset Management
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #drop="matMenu">
+          <button mat-button class="bt" routerLink="/login/dashboard/usermanagement">User Management</button><br>
+          <button mat-button class=" bt" routerLink="/login/dashboard/createdept">Department</button><br>
+          <button mat-button class="bt" routerLink="/login/dashboard/usermanagement">Role Management</button><br>
+          <button mat-button class="bt" routerLink="/login/dashboard/createpermission">Permission</button><br>
+          <button mat-button class="bt" routerLink="/login/dashboard/createbranch">Branch</button><br>
+          <button mat-button class="bt" routerLink="/login/dashboard/createrole">Product</button><br>
+        </mat-menu>
+        <button mat-button class="bt">
+          <mat-icon>show_chart</mat-icon>Activity Log
+        </button>
+        <button mat-button class="bt">
+          <mat-icon>library_books</mat-icon>Report
+        </button>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <h2> Create User</h2>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon">
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </mat-toolbar>
+
+      <div class="form">
+        <mat-card class="form-container" fxFlex="95">
+          <mat-label>
+            <p><b>Create User</b></p>
+            <h5>Add new user</h5>
+          </mat-label>
+          <p>
+            <mat-form-field [floatLabel]="'auto'">
+              <mat-label>First Name</mat-label>
+              <input matInput placeholder="First Name" required>
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field [floatLabel]="'auto'">
+              <mat-label>Last Name</mat-label>
+              <input matInput placeholder="Last Name">
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field [floatLabel]="'auto'">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email">
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field [floatLabel]="'auto'">
+              <mat-label>Contact</mat-label>
+              <input matInput placeholder="Contact">
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field [floatLabel]="'auto'">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Password">
+            </mat-form-field>
+          </p>
+
+          <p>
+            <mat-form-field [floatLabel]="'auto'">
+              <mat-label>Confirm Password</mat-label>
+              <input type="password" matInput placeholder="Confirm Password">
+            </mat-form-field>
+          </p>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Department</mat-label>
+            <mat-select>
+              <mat-option value="option">FINANCE</mat-option>
+              <mat-option value="option">HUMAN RESOURCE</mat-option>
+              <mat-option value="option">INVENTORY</mat-option>
+              <mat-option value="option">SALES</mat-option>
+              <mat-option value="option">PURCHASE</mat-option>
+              <mat-option value="option">INVOICING</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Associated Branch</mat-label>
+            <mat-select>
+              <mat-option value="option">BANGLORE</mat-option>
+              <mat-option value="option">MANGALORE</mat-option>
+              <mat-option value="option">PUTTUR</mat-option>
+              <mat-option value="option">CHENNAI</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+
+          <section class="example-section">
+            <mat-checkbox class="example-margin">Active</mat-checkbox><br><br>
+            <mat-checkbox class="example-margin">Confirm</mat-checkbox>
+          </section>
+          <br>
+
+          <br>Associated Role:
+          <mat-radio-group aria-label="Select an option">
+            <br><br>
+            <mat-radio-button value="1">Admin</mat-radio-button>
+            <br><br>
+            <mat-radio-button value="2">Viewer</mat-radio-button>
+            <br><br>
+            <mat-radio-button value="3">Editor</mat-radio-button>
+          </mat-radio-group>
+          <br>
+          <br>
+          <br>
+          <br>Associated Modules:<br>
+          <br>
+          <section class="example-section">
+            <mat-checkbox class="example-margin">Attendence</mat-checkbox>
+            <br><br>
+            <mat-checkbox class="example-margin">Leaves</mat-checkbox>
+            <br>
+            <br>
+            <mat-checkbox class="example-margin">Payroll</mat-checkbox>
+          </section>
+          <br><br>
+          <br>
+          <div>
+            <button mat-raised-button class="example-button-row">Cancel</button>
+            <button mat-raised-button class="btn" color="warn">Create</button>
+          </div>
+        </mat-card>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</body>

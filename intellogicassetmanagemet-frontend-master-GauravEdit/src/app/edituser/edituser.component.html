@@ -1,0 +1,97 @@
+<body>
+  <mat-sidenav-container>
+  <mat-sidenav mode="side" opened class="example-container">
+    <img src="assets/images/logo-light.png" class="logo"/><br>
+    <div class="text-center">
+      <img src="assets/images/users/user-6.jpg" class="rounded-circle img-tumbnail avatar-lg"/>
+      <p class="user">Rinu Madathil</p>
+      <p class="text-muted">Admin Head</p>
+    </div>
+    <div>
+    <button mat-button style="float: left;" class="bt">
+      <mat-icon>dashboard</mat-icon>Dashnoard
+    </button>
+    <button mat-button class="bt" [matMenuTriggerFor]="drop">
+      <mat-icon>flip_to_front</mat-icon>Asset Management
+      <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <mat-menu #drop="matMenu">
+      <button mat-button class="bt">User Management</button><br>
+      <button mat-button class="bt">Department</button><br>
+      <button mat-button class="bt">Role Management</button><br>
+      <button mat-button class="bt">Permission</button><br>
+      <button mat-button class="bt">Branch</button><br>
+      <button mat-button class="bt">Product</button><br>
+    </mat-menu>
+    <button mat-button class="bt">
+      <mat-icon>show_chart</mat-icon>Activity Log
+    </button>
+    <button mat-button class="bt">
+      <mat-icon>library_books</mat-icon>Report
+    </button></div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+  <mat-toolbar >
+    <h4> Edit User</h4>
+    <span class="example-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="form">
+    <mat-card class="form-container" fxFlex="95">
+      <mat-label>
+        <h4><b>Edit User</b></h4>
+        <p class="text-muted font-14 mb-0 mn">Edit this user</p>
+      </mat-label>
+    <div>
+      <mat-form-field  [floatLabel]="'auto'">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name">
+      </mat-form-field>
+    </div>
+    
+  <div>
+      <mat-form-field [floatLabel]="'auto'">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" >
+      </mat-form-field>
+    </div>
+
+    <h5 class="p-2 bg-light ml-n1">Access Rights</h5>
+    
+    <div class="form-group row">
+      <label class="col-sm-3  col-form-label">HUMAN RESOURCES</label>
+      <div class="col-sm-9">
+          <select class="form-control">
+              <option>Administrator</option>
+              <option>Editor</option>
+              <option>Viewer</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3  col-form-label">FINANCE</label>
+      <div class="col-sm-9">
+          <select class="form-control">
+              <option>Administrator</option>
+              <option>Editor</option>
+              <option>Viewer</option>
+          </select>
+      </div>
+    </div>
+
+    <div>
+      <button mat-raised-button class="example-button-row">Cancel</button>
+      <button mat-raised-button class="btn"color="warn">Save</button>
+    </div>
+  </mat-card>
+  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</body>
