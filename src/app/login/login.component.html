@@ -1,0 +1,31 @@
+<body>
+  <img src="assets/images/logo-dark.png" class="logo" />
+  <p class="erp">Intel Logic ERP</p>
+  <div fxLayoutAlign="center" class="main-div">
+    <mat-card fxFlex="30">
+      <mat-toolbar>
+        <span class="example-spacer"></span>SIGN IN
+      </mat-toolbar>
+      <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="signin" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+          <input matInput placeholder="Email id" required formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field>
+
+          <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password"
+            required>
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </mat-form-field>
+
+        <mat-checkbox color="primary">Remember Me</mat-checkbox>
+        <p></p>
+        <button mat-raised-button type="submit" color="primary">Login</button>
+        <p></p>
+        <a class="pass" href="">Forgot Password?</a>
+        <p></p>
+        <p>Don't have an account?<a class="signup" href=""><b>Sign up</b></a></p>
+      </form>
+    </mat-card>
+  </div>
+</body>

@@ -1,0 +1,54 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+.example{
+    text-align: 20px;
+    width: 200px;
+    height: 100px;
+    font-weight: bold;
+    margin-left: 0.5cm;
+    margin-top: 0.25cm;
+  }
+  body{
+    background-color: gainsboro;
+  }
+  mat-card{
+    text-align: center;
+    width: 170px;
+    height: 75px;
+    font-weight: bold;
+    margin-left: 0.5cm;
+    margin-top: 0.5cm;
+  }
+  #card-container {
+    
+    display: flex;
+        flex-flow: row wrap;
+    }
+    .example-container {
+  width: 200px;
+  height: 530px;
+  border:none
+}
+mat-drawer-content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.bt{
+  width: 200px;
+  height: 50px;
+  background-color: aliceblue;
+  border: none;
+}
+li{
+  list-style-type: none;
+  width: 160px;
+  height: 50px;
+  background-color: aliceblue;
+}
+.dr{
+  width: 200px;
+}
