@@ -33,4 +33,15 @@ export class ApiConService {
 
 
 
+  userCreate(user: Userlogin) {
+    return this.http
+      .post<any>(apiUrl + "/login", user)
+      .subscribe(Response => {
+        if (Response.token)
+          this.router.navigate(["/login/dashboard"]), err => console.log(err);
+
+      })
+  }
+
+
 }
