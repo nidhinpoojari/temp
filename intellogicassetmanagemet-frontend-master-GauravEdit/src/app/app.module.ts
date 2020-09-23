@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule,FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -51,6 +51,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
+    NgModule,
+   
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

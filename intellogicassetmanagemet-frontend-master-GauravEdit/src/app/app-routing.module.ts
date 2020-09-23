@@ -12,7 +12,7 @@ import { ManageuserComponent } from './manageuser/manageuser.component';
 import { MatNavComponent } from './mat-nav/mat-nav.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'login/dashboard/usermanagement', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: MatNavComponent },
   { path: 'login/dashboard', component: DashboardComponent },
